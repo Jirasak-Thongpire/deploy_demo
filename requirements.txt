@@ -1,6 +1,6 @@
-asgiref
-autopep8
-Django
-pycodestyle
-sqlparse
-tomli
+asgiref==3.7.2
+autopep8==2.0.2
+Django==5.2.2
+pycodestyle==2.10.0
+sqlparse==0.4.4
+tomli==2.0.1
