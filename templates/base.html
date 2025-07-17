@@ -47,6 +47,7 @@
             color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
+            min-height: 100vh;
         }
 
         /* Ultra Modern Animated Background */
@@ -296,7 +297,7 @@
             margin-right: 0.75rem;
         }
 
-        /* Ultra Modern Sidebar */
+        /* Ultra Modern Sidebar - ปรับให้ชิดขึ้นด้านบน */
         .sb-sidenav {
             background: var(--glass-bg) !important;
             backdrop-filter: blur(30px) saturate(200%);
@@ -305,7 +306,7 @@
             box-shadow: 
                 8px 0 32px rgba(0, 0, 0, 0.1),
                 inset -1px 0 0 rgba(255, 255, 255, 0.1);
-            margin-top: 76px;
+            margin-top: 56px; /* ลดลงจาก 76px เป็น 56px */
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
@@ -365,13 +366,14 @@
         }
 
         .nav-link.active {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--light-accent) 100%);
+            background: rgba(255, 255, 255, 0.3);
             color: var(--text-primary) !important;
             font-weight: 600;
             box-shadow: 
-                0 8px 25px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
-            transform: scale(1.02);
+                0 4px 15px rgba(0, 0, 0, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            transform: scale(1.01);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .nav-link.active .sb-nav-link-icon {
@@ -402,15 +404,15 @@
             font-weight: 500;
         }
 
-        /* Ultra Modern Main Content */
+        /* Ultra Modern Main Content - ปรับให้ตรงกับ sidebar */
         #layoutSidenav_content {
-            margin-top: 76px;
+            margin-top: 56px; /* ลดลงจาก 76px เป็น 56px */
             background: transparent;
         }
 
         main {
             padding: 2.5rem;
-            min-height: calc(100vh - 76px - 120px);
+            min-height: calc(100vh - 56px - 120px); /* ปรับให้ตรงกับ margin-top ใหม่ */
         }
 
         /* Ultra Modern Cards */
@@ -569,6 +571,49 @@
             margin-right: 0.5rem;
         }
 
+        /* Activity Items */
+        .activity-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: var(--glass-bg);
+            border-radius: 12px;
+            border-left: 4px solid var(--text-primary);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .activity-item:hover {
+            transform: translateX(8px);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .activity-item.secondary {
+            border-left-color: var(--text-secondary);
+        }
+
+        .activity-item.accent {
+            border-left-color: var(--accent-color);
+        }
+
+        .activity-item .activity-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .activity-item .activity-content i {
+            margin-right: 1rem;
+            color: var(--text-primary);
+        }
+
+        .activity-item .activity-title {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .activity-item .activity-time {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
         /* Ultra Modern Footer */
         footer {
             background: var(--glass-bg) !important;
@@ -709,6 +754,14 @@
             0% { background-position: -200% 0; }
             100% { background-position: 200% 0; }
         }
+
+        /* Ripple Effect */
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body class="sb-nav-fixed">
@@ -752,9 +805,9 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Core</div>
-                        <a class="nav-link active glow-on-hover" href="{% url 'index' %}">
+                        <a class="nav-link glow-on-hover" href="{% url 'index' %}">
                             <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
-                            Dashboard
+                            Home
                         </a>
                         <a class="nav-link glow-on-hover" href="{% url 'about' %}">
                             <div class="sb-nav-link-icon"><i class="fas fa-info-circle"></i></div>
@@ -842,30 +895,30 @@
                                         Recent Activities
                                     </div>
                                     <div class="card-body">
-                                        <div class="activity-item mb-3 p-3" style="background: var(--glass-bg); border-radius: 12px; border-left: 4px solid var(--text-primary);">
-                                            <div class="d-flex align-items-center">
-                                                <i class="fas fa-user-plus me-3" style="color: var(--text-primary);"></i>
+                                        <div class="activity-item">
+                                            <div class="activity-content">
+                                                <i class="fas fa-user-plus"></i>
                                                 <div>
-                                                    <div style="font-weight: 600; color: var(--text-primary);">New user registered</div>
-                                                    <small style="color: var(--text-secondary);">2 minutes ago</small>
+                                                    <div class="activity-title">New user registered</div>
+                                                    <div class="activity-time">2 minutes ago</div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="activity-item mb-3 p-3" style="background: var(--glass-bg); border-radius: 12px; border-left: 4px solid var(--text-secondary);">
-                                            <div class="d-flex align-items-center">
-                                                <i class="fas fa-file-upload me-3" style="color: var(--text-primary);"></i>
+                                        <div class="activity-item secondary">
+                                            <div class="activity-content">
+                                                <i class="fas fa-file-upload"></i>
                                                 <div>
-                                                    <div style="font-weight: 600; color: var(--text-primary);">File uploaded</div>
-                                                    <small style="color: var(--text-secondary);">5 minutes ago</small>
+                                                    <div class="activity-title">File uploaded</div>
+                                                    <div class="activity-time">5 minutes ago</div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="activity-item mb-3 p-3" style="background: var(--glass-bg); border-radius: 12px; border-left: 4px solid var(--accent-color);">
-                                            <div class="d-flex align-items-center">
-                                                <i class="fas fa-cog me-3" style="color: var(--text-primary);"></i>
+                                        <div class="activity-item accent">
+                                            <div class="activity-content">
+                                                <i class="fas fa-cog"></i>
                                                 <div>
-                                                    <div style="font-weight: 600; color: var(--text-primary);">Settings updated</div>
-                                                    <small style="color: var(--text-secondary);">10 minutes ago</small>
+                                                    <div class="activity-title">Settings updated</div>
+                                                    <div class="activity-time">10 minutes ago</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -971,6 +1024,12 @@
                 transform: scale(0);
                 animation: ripple 0.6s linear;
                 pointer-events: none;
+                width: 100px;
+                height: 100px;
+                top: 50%;
+                left: 50%;
+                margin-top: -50px;
+                margin-left: -50px;
             `;
             this.appendChild(ripple);
             
@@ -997,8 +1056,7 @@
             counters.forEach(counter => {
                 const target = parseFloat(counter.getAttribute('data-count'));
                 const isPercentage = counter.textContent.includes('%');
-                const isDollar = counter.textContent.includes('
-                        );
+                const isDollar = counter.textContent.includes(');
                 let current = 0;
                 const increment = target / 100;
                 
@@ -1013,8 +1071,7 @@
                     if (isPercentage) {
                         displayValue = current.toFixed(1) + '%';
                     } else if (isDollar) {
-                        displayValue = '
-                         + displayValue.toLocaleString();
+                        displayValue = ' + displayValue.toLocaleString();
                     } else {
                         displayValue = displayValue.toLocaleString();
                     }
@@ -1045,11 +1102,11 @@
         // Ultra Modern Parallax Effect
         window.addEventListener('scroll', function() {
             const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('body::before');
-            if (parallax) {
-                const speed = scrolled * 0.5;
-                document.body.style.setProperty('--scroll-offset', speed + 'px');
-            }
+            const parallaxElements = document.querySelectorAll('.card, .stat-card');
+            parallaxElements.forEach(element => {
+                const speed = scrolled * 0.1;
+                element.style.transform = `translateY(${speed}px)`;
+            });
         });
         
         // Ultra Modern Card Hover Effects
@@ -1065,7 +1122,7 @@
         });
         
         // Ultra Modern Ripple Effect for buttons
-        document.querySelectorAll('.btn').forEach(button => {
+        document.querySelectorAll('.btn, .nav-link').forEach(button => {
             button.addEventListener('click', function(e) {
                 const ripple = document.createElement('span');
                 const rect = this.getBoundingClientRect();
@@ -1084,24 +1141,14 @@
                     transform: scale(0);
                     animation: ripple 0.6s linear;
                     pointer-events: none;
+                    z-index: 1000;
                 `;
                 
+                this.style.position = 'relative';
                 this.appendChild(ripple);
                 setTimeout(() => ripple.remove(), 600);
             });
         });
-        
-        // Add ripple animation keyframes
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
         
         // Ultra Modern Theme Switcher (Optional)
         function toggleTheme() {
@@ -1112,6 +1159,14 @@
         // Load saved theme
         if (localStorage.getItem('theme') === 'dark') {
             document.body.classList.add('dark-theme');
+        }
+        
+        // Initialize tooltips and popovers
+        if (typeof bootstrap !== 'undefined') {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
         }
     </script>
 </body>

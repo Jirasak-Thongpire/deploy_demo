@@ -1,5 +1,580 @@
 {% extends 'base.html' %}
 
-{% block title %}Jirasak{% endblock title %}
+{% block title %}Jirasak - Student Portfolio{% endblock title %}
 
-{% block content %}{% endblock content %}
+{% block content %}
+<div class="container-fluid">
+    <!-- Hero Welcome Section -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="hero-welcome text-center py-5" style="background: linear-gradient(135deg, var(--glass-bg) 0%, rgba(255, 255, 255, 0.4) 100%); backdrop-filter: blur(30px); border-radius: 30px; border: 1px solid var(--glass-border); box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1); position: relative; overflow: hidden;">
+                <!-- Animated background elements -->
+                <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px); background-size: 50px 50px; animation: float 20s linear infinite; opacity: 0.3;"></div>
+                
+                <div class="hero-content position-relative" style="z-index: 2;">
+                    <div class="animate-fade-in">
+                        <div class="mb-4">
+                            <div class="profile-image-container d-inline-block position-relative">
+                                <div style="width: 150px; height: 150px; margin: 0 auto; background: linear-gradient(45deg, #007bff, #6610f2, #e83e8c, #fd7e14); border-radius: 50%; padding: 4px; animation: profileRotate 10s linear infinite;">
+                                    <div style="width: 100%; height: 100%; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                                        <i class="fas fa-user fa-4x" style="color: var(--text-primary);"></i>
+                                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%); animation: shine 3s ease-in-out infinite;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h1 class="display-3 fw-bold mb-3" style="background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 50%, #007bff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -1px;">
+                            Welcome to My Portfolio
+                        </h1>
+                        
+                        <h2 class="h4 mb-4" style="color: var(--text-primary); font-weight: 600;">
+                            Hi, I'm <span style="color: #007bff; font-weight: 700;">Jirasak</span> 👋
+                        </h2>
+                        
+                        <p class="lead mb-4" style="color: var(--text-secondary); max-width: 700px; margin: 0 auto; line-height: 1.8;">
+                            A passionate Computer Science student exploring the world of web development, 
+                            constantly learning new technologies and building exciting projects.
+                        </p>
+                        
+                        <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
+                            <span class="typing-badge px-4 py-2" style="background: var(--accent-color); color: var(--text-primary); border-radius: 25px; font-size: 0.9rem; animation: pulse 2s infinite;">
+                                <i class="fas fa-graduation-cap me-2"></i>CS Student
+                            </span>
+                            <span class="typing-badge px-4 py-2" style="background: var(--light-accent); color: var(--text-primary); border-radius: 25px; font-size: 0.9rem; animation: pulse 2s infinite 0.5s;">
+                                <i class="fas fa-code me-2"></i>Web Developer
+                            </span>
+                            <span class="typing-badge px-4 py-2" style="background: var(--secondary-color); color: var(--text-primary); border-radius: 25px; font-size: 0.9rem; animation: pulse 2s infinite 1s;">
+                                <i class="fas fa-heart me-2"></i>Tech Enthusiast
+                            </span>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <a href="#contact" class="btn btn-lg px-5 py-3" style="background: linear-gradient(135deg, #007bff, #6610f2); color: white; border: none; border-radius: 25px; font-weight: 600; transition: all 0.3s ease; text-decoration: none; box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);">
+                                <i class="fas fa-envelope me-2"></i>Contact Me
+                            
+
+                        
+                        
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="row mb-5">
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="quick-stat-card text-center p-4" style="background: var(--glass-bg); backdrop-filter: blur(30px); border-radius: 20px; border: 1px solid var(--glass-border); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08); transition: all 0.4s ease; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #007bff, #6610f2);"></div>
+                <i class="fas fa-project-diagram fa-2x mb-3" style="color: #007bff;"></i>
+                <div class="stat-number mb-2" style="font-size: 2.5rem; font-weight: 800; color: var(--text-primary);" data-count="2">0</div>
+                <div style="color: var(--text-secondary); font-weight: 500;">Projects Completed</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="quick-stat-card text-center p-4" style="background: var(--glass-bg); backdrop-filter: blur(30px); border-radius: 20px; border: 1px solid var(--glass-border); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08); transition: all 0.4s ease; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #28a745, #20c997);"></div>
+                <i class="fas fa-code fa-2x mb-3" style="color: #28a745;"></i>
+                <div class="stat-number mb-2" style="font-size: 2.5rem; font-weight: 800; color: var(--text-primary);" data-count="4">0</div>
+                <div style="color: var(--text-secondary); font-weight: 500;">Languages Learned</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="quick-stat-card text-center p-4" style="background: var(--glass-bg); backdrop-filter: blur(30px); border-radius: 20px; border: 1px solid var(--glass-border); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08); transition: all 0.4s ease; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #ffc107, #fd7e14);"></div>
+                <i class="fas fa-calendar-alt fa-2x mb-3" style="color: #ffc107;"></i>
+                <div class="stat-number mb-2" style="font-size: 2.5rem; font-weight: 800; color: var(--text-primary);" data-count="2">0</div>
+                <div style="color: var(--text-secondary); font-weight: 500;">Years of Study</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="quick-stat-card text-center p-4" style="background: var(--glass-bg); backdrop-filter: blur(30px); border-radius: 20px; border: 1px solid var(--glass-border); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08); transition: all 0.4s ease; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #e83e8c, #6f42c1);"></div>
+                <i class="fas fa-star fa-2x mb-3" style="color: #e83e8c;"></i>
+                <div class="stat-number mb-2" style="font-size: 2.5rem; font-weight: 800; color: var(--text-primary);" data-count="3.8">0</div>
+                <div style="color: var(--text-secondary); font-weight: 500;">Current GPA</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Skills Section -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-brain me-2"></i>Technical Skills
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <h6 style="color: var(--text-primary); font-weight: 600; margin-bottom: 1.5rem;">
+                                <i class="fas fa-code me-2" style="color: #007bff;"></i>Programming Languages
+                            </h6>
+                            <div class="skill-item mb-3">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span style="color: var(--text-primary); font-weight: 500;">Python</span>
+                                    
+                                </div>
+                                <div class="skill-bar" style="height: 8px; background: var(--accent-color); border-radius: 10px; overflow: hidden;">
+                                    <div style="width: 90%; height: 100%; background: linear-gradient(90deg, #007bff, #6610f2); border-radius: 10px; animation: skillLoad 2s ease;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item mb-3">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span style="color: var(--text-primary); font-weight: 500;">JavaScript</span>
+                                    
+                                </div>
+                                <div class="skill-bar" style="height: 8px; background: var(--accent-color); border-radius: 10px; overflow: hidden;">
+                                    <div style="width: 85%; height: 100%; background: linear-gradient(90deg, #ffc107, #fd7e14); border-radius: 10px; animation: skillLoad 2s ease 0.2s both;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item mb-3">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span style="color: var(--text-primary); font-weight: 500;">Java</span>
+                                    
+                                </div>
+                                <div class="skill-bar" style="height: 8px; background: var(--accent-color); border-radius: 10px; overflow: hidden;">
+                                    <div style="width: 80%; height: 100%; background: linear-gradient(90deg, #28a745, #20c997); border-radius: 10px; animation: skillLoad 2s ease 0.4s both;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <h6 style="color: var(--text-primary); font-weight: 600; margin-bottom: 1.5rem;">
+                                <i class="fas fa-tools me-2" style="color: #28a745;"></i>Frameworks & Tools
+                            </h6>
+                            <div class="skill-item mb-3">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span style="color: var(--text-primary); font-weight: 500;">Django</span>
+                                    
+                                </div>
+                                <div class="skill-bar" style="height: 8px; background: var(--accent-color); border-radius: 10px; overflow: hidden;">
+                                    <div style="width: 85%; height: 100%; background: linear-gradient(90deg, #e83e8c, #6f42c1); border-radius: 10px; animation: skillLoad 2s ease 0.6s both;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item mb-3">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span style="color: var(--text-primary); font-weight: 500;">React</span>
+                                    
+                                </div>
+                                <div class="skill-bar" style="height: 8px; background: var(--accent-color); border-radius: 10px; overflow: hidden;">
+                                    <div style="width: 75%; height: 100%; background: linear-gradient(90deg, #17a2b8, #007bff); border-radius: 10px; animation: skillLoad 2s ease 0.8s both;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item mb-3">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span style="color: var(--text-primary); font-weight: 500;">Git</span>
+                                    
+                                </div>
+                                <div class="skill-bar" style="height: 8px; background: var(--accent-color); border-radius: 10px; overflow: hidden;">
+                                    <div style="width: 90%; height: 100%; background: linear-gradient(90deg, #dc3545, #fd7e14); border-radius: 10px; animation: skillLoad 2s ease 1s both;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Current Learning Section -->
+    <div class="row mb-5">
+        <div class="col-lg-8 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <i class="fas fa-book-open me-2"></i>Currently Learning
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="learning-item p-3" style="background: var(--glass-bg); border-radius: 12px; border-left: 4px solid #007bff; transition: all 0.3s ease;">
+                                <h6 style="color: var(--text-primary); font-weight: 600;">
+                                    <i class="fab fa-react me-2" style="color: #007bff;"></i>Advanced React
+                                </h6>
+                                <p style="color: var(--text-secondary); margin-bottom: 0; font-size: 0.9rem;">
+                                    Diving deep into hooks, context, and performance optimization
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="learning-item p-3" style="background: var(--glass-bg); border-radius: 12px; border-left: 4px solid #28a745; transition: all 0.3s ease;">
+                                <h6 style="color: var(--text-primary); font-weight: 600;">
+                                    <i class="fas fa-robot me-2" style="color: #28a745;"></i>Machine Learning
+                                </h6>
+                                <p style="color: var(--text-secondary); margin-bottom: 0; font-size: 0.9rem;">
+                                    Exploring Python ML libraries and neural networks
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="learning-item p-3" style="background: var(--glass-bg); border-radius: 12px; border-left: 4px solid #ffc107; transition: all 0.3s ease;">
+                                <h6 style="color: var(--text-primary); font-weight: 600;">
+                                    <i class="fab fa-aws me-2" style="color: #ffc107;"></i>Cloud Computing
+                                </h6>
+                                <p style="color: var(--text-secondary); margin-bottom: 0; font-size: 0.9rem;">
+                                    Learning AWS services and cloud architecture
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="learning-item p-3" style="background: var(--glass-bg); border-radius: 12px; border-left: 4px solid #e83e8c; transition: all 0.3s ease;">
+                                <h6 style="color: var(--text-primary); font-weight: 600;">
+                                    <i class="fas fa-mobile-alt me-2" style="color: #e83e8c;"></i>React Native
+                                </h6>
+                                <p style="color: var(--text-secondary); margin-bottom: 0; font-size: 0.9rem;">
+                                    Building cross-platform mobile applications
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <i class="fas fa-trophy me-2"></i>Recent Achievements
+                </div>
+                <div class="card-body">
+                    <div class="achievement-item mb-3 p-3" style="background: var(--glass-bg); border-radius: 12px;">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-medal fa-2x me-3" style="color: #ffc107;"></i>
+                            <div>
+                                <h6 style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.5rem;">Dean's List</h6>
+                                <small style="color: var(--text-secondary);">Fall 2023 Semester</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achievement-item mb-3 p-3" style="background: var(--glass-bg); border-radius: 12px;">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-code fa-2x me-3" style="color: #007bff;"></i>
+                            <div>
+                                <h6 style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.5rem;">Hackathon Winner</h6>
+                                <small style="color: var(--text-secondary);">University Code Fest 2023</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achievement-item p-3" style="background: var(--glass-bg); border-radius: 12px;">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-certificate fa-2x me-3" style="color: #28a745;"></i>
+                            <div>
+                                <h6 style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.5rem;">AWS Certified</h6>
+                                <small style="color: var(--text-secondary);">Cloud Practitioner</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact CTA Section -->
+    <div class="row" id="contact">
+        <div class="col-12">
+            <div class="contact-cta text-center py-5" style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--light-accent) 100%); border-radius: 30px; box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 30% 20%, rgba(0, 123, 255, 0.1) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(108, 99, 255, 0.1) 0%, transparent 50%);"></div>
+                <div style="position: relative; z-index: 2;">
+                    <h3 style="color: var(--text-primary); font-weight: 700; margin-bottom: 1rem;">
+                        <i class="fas fa-rocket me-2"></i>Let's Build Something Amazing Together!
+                    </h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                        I'm always excited to collaborate on new projects, learn from experienced developers, 
+                        or discuss the latest in technology. Feel free to reach out!
+                    </p>
+                    <div class="contact-buttons">
+                        <a href="mailto:jirasak@example.com" class="btn btn-lg me-3 px-5 py-3" style="background: linear-gradient(135deg, #007bff, #6610f2); color: white; border: none; border-radius: 25px; font-weight: 600; transition: all 0.3s ease; text-decoration: none; box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);">
+                            <i class="fas fa-envelope me-2"></i>Send Email
+                        </a>
+                        <a href="https://linkedin.com/in/jirasak" class="btn btn-lg px-5 py-3" style="background: transparent; color: var(--text-primary); border: 2px solid var(--text-primary); border-radius: 25px; font-weight: 600; transition: all 0.3s ease; text-decoration: none;">
+                            <i class="fab fa-linkedin me-2"></i>LinkedIn
+                        </a>
+                    </div>
+                    
+                    <div class="social-links mt-4">
+                        <a href="#" class="social-icon me-3" style="display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: var(--glass-bg); color: var(--text-primary); border-radius: 50%; text-decoration: none; transition: all 0.3s ease; backdrop-filter: blur(10px); border: 1px solid var(--glass-border);">
+                            <i class="fab fa-github fa-lg"></i>
+                        </a>
+                        <a href="#" class="social-icon me-3" style="display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: var(--glass-bg); color: var(--text-primary); border-radius: 50%; text-decoration: none; transition: all 0.3s ease; backdrop-filter: blur(10px); border: 1px solid var(--glass-border);">
+                            <i class="fab fa-twitter fa-lg"></i>
+                        </a>
+                        <a href="#" class="social-icon me-3" style="display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: var(--glass-bg); color: var(--text-primary); border-radius: 50%; text-decoration: none; transition: all 0.3s ease; backdrop-filter: blur(10px); border: 1px solid var(--glass-border);">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                        <a href="#" class="social-icon" style="display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: var(--glass-bg); color: var(--text-primary); border-radius: 50%; text-decoration: none; transition: all 0.3s ease; backdrop-filter: blur(10px); border: 1px solid var(--glass-border);">
+                            <i class="fab fa-discord fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Custom Animations */
+@keyframes profileRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) skewX(-15deg); }
+    100% { transform: translateX(200%) skewX(-15deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes skillLoad {
+    0% { width: 0%; }
+    100% { width: var(--skill-width, 0%); }
+}
+
+/* Hover Effects */
+.quick-stat-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15) !important;
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15) !important;
+}
+
+.learning-item:hover {
+    transform: translateX(8px);
+    background: rgba(255, 255, 255, 0.4) !important;
+}
+
+.achievement-item:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.4) !important;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px) scale(1.1);
+    background: var(--accent-color) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Tech Tags */
+.tech-tag {
+    display: inline-block;
+    background: var(--glass-bg);
+    color: var(--text-primary);
+    padding: 0.3rem 0.7rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin: 0.2rem;
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Button Hover Effects */
+.btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-welcome {
+        padding: 3rem 1rem !important;
+    }
+    
+    .display-3 {
+        font-size: 2.5rem !important;
+    }
+    
+    .hero-buttons .btn {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+    
+    .contact-buttons .btn {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+}
+
+/* Loading Animation */
+.animate-fade-in {
+    animation: ultraFadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes ultraFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Skill bars specific styling */
+.skill-item .skill-bar div {
+    transform-origin: left;
+    animation-fill-mode: both;
+}
+
+/* Floating particles background animation */
+@keyframes float {
+    0% { transform: translateY(0px) translateX(0px); }
+    33% { transform: translateY(-10px) translateX(5px); }
+    66% { transform: translateY(5px) translateX(-5px); }
+    100% { transform: translateY(0px) translateX(0px); }
+}
+</style>
+
+<script>
+// Counter Animation for Stats
+function animateHomeCounters() {
+    const counters = document.querySelectorAll('.stat-number[data-count]');
+    counters.forEach(counter => {
+        const target = parseFloat(counter.getAttribute('data-count'));
+        let current = 0;
+        const increment = target / 60;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            
+            // Special formatting for GPA
+            if (counter.parentElement.textContent.includes('GPA')) {
+                counter.textContent = current.toFixed(1);
+            } else {
+                counter.textContent = Math.floor(current);
+            }
+        }, 30);
+    });
+}
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Intersection Observer for animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            
+            // Trigger counter animation when stats section is visible
+            if (entry.target.classList.contains('quick-stat-card')) {
+                setTimeout(animateHomeCounters, 200);
+            }
+        }
+    });
+}, observerOptions);
+
+// Initialize animations when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Observe stat cards for intersection
+    document.querySelectorAll('.quick-stat-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'all 0.6s ease';
+        observer.observe(card);
+    });
+    
+    // Observe project cards
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'all 0.6s ease';
+        observer.observe(card);
+    });
+    
+    // Add typing effect to badges
+    const badges = document.querySelectorAll('.typing-badge');
+    badges.forEach((badge, index) => {
+        badge.style.animationDelay = `${index * 0.5}s`;
+    });
+});
+
+// Add particle cursor effect
+document.addEventListener('mousemove', function(e) {
+    const particle = document.createElement('div');
+    particle.style.cssText = `
+        position: fixed;
+        width: 4px;
+        height: 4px;
+        background: radial-gradient(circle, rgba(0, 123, 255, 0.8) 0%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        left: ${e.clientX - 2}px;
+        top: ${e.clientY - 2}px;
+        animation: particleFade 1s ease-out forwards;
+    `;
+    
+    document.body.appendChild(particle);
+    
+    setTimeout(() => {
+        particle.remove();
+    }, 1000);
+});
+
+// Add particle fade animation
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes particleFade {
+        0% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(0) translateY(-20px);
+        }
+    }
+`;
+document.head.appendChild(style);
+
+// Add hover sound effect (optional)
+document.querySelectorAll('.btn, .project-card, .quick-stat-card').forEach(element => {
+    element.addEventListener('mouseenter', function() {
+        // You can add a subtle hover sound here if desired
+        // const audio = new Audio('path/to/hover-sound.mp3');
+        // audio.volume = 0.1;
+        // audio.play();
+    });
+});
+</script>
+{% endblock content %}

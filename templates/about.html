@@ -1,5 +1,269 @@
 {% extends 'base.html' %}
 
-{% block title %}Jirasak{% endblock title %}
+{% block title %}About - Jirasak{% endblock title %}
 
-{% block content %}{% endblock content %}
+{% block content %}
+<div class="container-fluid">
+    <!-- Hero Section -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="hero-section text-center py-5" style="background: var(--glass-bg); backdrop-filter: blur(30px); border-radius: 24px; border: 1px solid var(--glass-border); box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color), var(--light-accent));"></div>
+                <div class="animate-fade-in">
+                    <i class="fas fa-rocket fa-4x mb-4" style="color: var(--text-primary); animation: float 3s ease-in-out infinite;"></i>
+                    <h1 class="display-4 fw-bold mb-4" style="background: linear-gradient(135deg, var(--text-primary), var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">About Jirasak</h1>
+                    <p class="lead mb-4" style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Computer Science student passionate about learning and creating innovative web applications with modern technology.</p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <span class="badge px-4 py-2" style="background: var(--accent-color); color: var(--text-primary); border-radius: 20px; font-size: 0.9rem;">
+                            <i class="fas fa-graduation-cap me-2"></i>Student
+                        </span>
+                        <span class="badge px-4 py-2" style="background: var(--light-accent); color: var(--text-primary); border-radius: 20px; font-size: 0.9rem;">
+                            <i class="fas fa-code me-2"></i>Web Developer
+                        </span>
+                        <span class="badge px-4 py-2" style="background: var(--secondary-color); color: var(--text-primary); border-radius: 20px; font-size: 0.9rem;">
+                            <i class="fas fa-laptop-code me-2"></i>Learner
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Content -->
+    <div class="row mb-5">
+        <div class="col-lg-8 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <i class="fas fa-user-graduate me-2"></i>My Journey
+                </div>
+                <div class="card-body">
+                    <p style="color: var(--text-primary); line-height: 1.8; font-size: 1.1rem;">
+                        Hi! I'm Jirasak, a Computer Science student with a passion for web development and technology. Currently pursuing my degree while building practical skills through hands-on projects and continuous learning.
+                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">
+                        My journey started with curiosity about how websites work, and it has evolved into a deep love for creating digital solutions. I enjoy combining theoretical knowledge from my studies with real-world application through personal projects and coursework.
+                    </p>
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <div class="feature-item p-3 mb-3" style="background: var(--glass-bg); border-radius: 16px; border-left: 4px solid var(--text-primary); transition: all 0.3s ease;">
+                                <h6 style="color: var(--text-primary); font-weight: 600;">
+                                    <i class="fas fa-book me-2" style="color: #ffc107;"></i>Continuous Learning
+                                </h6>
+                                <p style="color: var(--text-secondary); margin-bottom: 0; font-size: 0.95rem;">
+                                    Always eager to explore new technologies and improve my skills.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-item p-3 mb-3" style="background: var(--glass-bg); border-radius: 16px; border-left: 4px solid var(--text-secondary); transition: all 0.3s ease;">
+                                <h6 style="color: var(--text-primary); font-weight: 600;">
+                                    <i class="fas fa-project-diagram me-2" style="color: #17a2b8;"></i>Project-Based
+                                </h6>
+                                <p style="color: var(--text-secondary); margin-bottom: 0; font-size: 0.95rem;">
+                                    Learning through building real projects and solving practical problems.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-item p-3 mb-3" style="background: var(--glass-bg); border-radius: 16px; border-left: 4px solid var(--accent-color); transition: all 0.3s ease;">
+                                <h6 style="color: var(--text-primary); font-weight: 600;">
+                                    <i class="fas fa-users me-2" style="color: #28a745;"></i>Collaborative
+                                </h6>
+                                <p style="color: var(--text-secondary); margin-bottom: 0; font-size: 0.95rem;">
+                                    Working with classmates and contributing to open-source projects.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-item p-3 mb-3" style="background: var(--glass-bg); border-radius: 16px; border-left: 4px solid var(--light-accent); transition: all 0.3s ease;">
+                                <h6 style="color: var(--text-primary); font-weight: 600;">
+                                    <i class="fas fa-lightbulb me-2" style="color: #dc3545;"></i>Creative Problem Solver
+                                </h6>
+                                <p style="color: var(--text-secondary); margin-bottom: 0; font-size: 0.95rem;">
+                                    Finding innovative solutions to programming challenges and assignments.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <i class="fas fa-chart-bar me-2"></i>Academic Stats
+                </div>
+                <div class="card-body text-center">
+                    <div class="stat-item mb-4">
+                        <div class="stat-number-small mb-2" style="font-size: 2.5rem; font-weight: 800; color: var(--text-primary);" data-count="2">0</div>
+                        <div style="color: var(--text-secondary); font-weight: 500;">
+                            <i class="fas fa-project-diagram me-2"></i>Projects Completed
+                        </div>
+                    </div>
+                    <div class="stat-item mb-4">
+                        <div class="stat-number-small mb-2" style="font-size: 2.5rem; font-weight: 800; color: var(--text-primary);" data-count="2">0</div>
+                        <div style="color: var(--text-secondary); font-weight: 500;">
+                            <i class="fas fa-calendar-alt me-2"></i>Years of Study
+                        </div>
+                    </div>
+                    <div class="stat-item mb-4">
+                        <div class="stat-number-small mb-2" style="font-size: 2.5rem; font-weight: 800; color: var(--text-primary);" data-count="4">0</div>
+                        <div style="color: var(--text-secondary); font-weight: 500;">
+                            <i class="fas fa-code me-2"></i>Languages Learned
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number-small mb-2" style="font-size: 2.5rem; font-weight: 800; color: var(--text-primary);" data-count="40">0</div>
+                        <div style="color: var(--text-secondary); font-weight: 500;">
+                            <i class="fas fa-clock me-2"></i>Study Hours/Week
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Technologies Section -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-laptop-code me-2"></i>Technologies I'm Learning
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <h6 style="color: var(--text-primary); font-weight: 600; margin-bottom: 1rem;">
+                                <i class="fas fa-code me-2" style="color: #007bff;"></i>Frontend
+                            </h6>
+                            <div class="tech-list">
+                                <span class="tech-badge">HTML/CSS</span>
+                                <span class="tech-badge">JavaScript</span>
+                                
+                                <span class="tech-badge">Bootstrap</span>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <h6 style="color: var(--text-primary); font-weight: 600; margin-bottom: 1rem;">
+                                <i class="fas fa-server me-2" style="color: #28a745;"></i>Backend
+                            </h6>
+                            <div class="tech-list">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Django</span>
+                                
+                                <span class="tech-badge">Java</span>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <h6 style="color: var(--text-primary); font-weight: 600; margin-bottom: 1rem;">
+                                <i class="fas fa-database me-2" style="color: #ffc107;"></i>Database
+                            </h6>
+                            <div class="tech-list">
+                                <span class="tech-badge">MySQL</span>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <h6 style="color: var(--text-primary); font-weight: 600; margin-bottom: 1rem;">
+                                <i class="fas fa-tools me-2" style="color: #dc3545;"></i>Tools & Others
+                            </h6>
+                            <div class="tech-list">
+                                <span class="tech-badge">Git/GitHub</span>
+                                <span class="tech-badge">VS Code</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="row">
+        <div class="col-12">
+            <div class="cta-section text-center py-5" style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--light-accent) 100%); border-radius: 24px; box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%); opacity: 0.8;"></div>
+                <div style="position: relative; z-index: 1;">
+                    <h3 style="color: var(--text-primary); font-weight: 700; margin-bottom: 1rem;">Want to Connect?</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+                        I'm always excited to connect with fellow students, developers, and anyone interested in technology and learning!
+                    </p>
+                    <a href="#" class="btn btn-lg px-5 py-3" style="background: var(--text-primary); color: white; border: none; border-radius: 20px; font-weight: 600; transition: all 0.3s ease; text-decoration: none;">
+                        <i class="fas fa-envelope me-2"></i>Let's Connect
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.feature-item:hover {
+    transform: translateX(8px);
+    background: rgba(255, 255, 255, 0.4) !important;
+}
+
+.team-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.15) !important;
+}
+
+.tech-badge {
+    display: inline-block;
+    background: var(--glass-bg);
+    color: var(--text-primary);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin: 0.2rem;
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.animate-fade-in {
+    animation: ultraFadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+</style>
+
+<script>
+// Animate counters for about page stats
+function animateAboutCounters() {
+    const counters = document.querySelectorAll('.stat-number-small[data-count]');
+    counters.forEach(counter => {
+        const target = parseFloat(counter.getAttribute('data-count'));
+        let current = 0;
+        const increment = target / 50;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            
+            counter.textContent = Math.floor(current);
+        }, 40);
+    });
+}
+
+// Initialize animations when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(animateAboutCounters, 800);
+});
+</script>
+{% endblock content %}
